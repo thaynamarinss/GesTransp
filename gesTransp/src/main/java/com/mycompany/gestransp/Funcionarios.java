@@ -6,19 +6,19 @@ package com.mycompany.gestransp;
 
 /**
  *
- * @author thayn
+ * @author Thayná Marins e Raphael Yoshiki
  */
-import java.util.Date;
+
 public class Funcionarios {
     private String nome;
     private String CPF;
-    private Date dataContrat;
+    private String dataContrat;
     private Float salario;
     private String endereco;
     private String cargo;
     private String tel;
     
-    public Funcionarios(String nome, String CPF, Date dataContrat, float salario, String endereco, String cargo, String tel) {
+    public Funcionarios(String nome, String CPF, String dataContrat, float salario, String endereco, String cargo, String tel) {
        this.nome = nome;
        this.CPF = CPF;
        this.dataContrat = dataContrat;
@@ -59,14 +59,14 @@ public class Funcionarios {
     /**
      * @return the dataContrat
      */
-    public Date getDataContrat() {
+    public String getDataContrat() {
         return dataContrat;
     }
 
     /**
      * @param dataContrat the dataContrat to set
      */
-    public void setDataContrat(Date dataContrat) {
+    public void setDataContrat(String dataContrat) {
         this.dataContrat = dataContrat;
     }
 
@@ -124,6 +124,12 @@ public class Funcionarios {
      */
     public void setTel(String tel) {
         this.tel = tel;
+    }
+    
+    @Override
+    public String toString() {
+        return "Nome: " + nome + " CPF: "+ CPF + " Data de contratação: " + dataContrat + " Salário: "
+                + salario +" Endereço: " + endereco + " Cargo: " + cargo + " Telefone: "+tel; 
     }
     
 }

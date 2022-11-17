@@ -6,21 +6,21 @@ package com.mycompany.gestransp;
 
 /**
  *
- * @author thayn
+ * @author Thayná Marins e Raphael Yoshiki
  */
-import java.util.Date;
+
 public class GastosVeiculo {
     private String placa;
-    private Date data;
+    private String data;
     private String motorista;
     private int km;
     private int qtdLitros;
-    private double valorCombustivel;
+    private float valorCombustivel;
     private String descManutencao;
-    private Float valorManutencao;
+    private float valorManutencao;
     private int kmpordia = 0; //valor calculado usando km de dias anteriores da mesma placa
     
-public GastosVeiculo(String placa, Date data, String motorista, int km, int qtdLitros, double valorCombustivel, String descManutencao, Float valorManutencao, int kmpordia){
+public GastosVeiculo(String placa, String data, String motorista, int km, int qtdLitros, float valorCombustivel, String descManutencao, float valorManutencao, int kmpordia){
     this.placa = placa;
     this.data = data;
     this.motorista = motorista;
@@ -51,14 +51,14 @@ public GastosVeiculo(String placa, Date data, String motorista, int km, int qtdL
     /**
      * @return the data
      */
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -107,14 +107,14 @@ public GastosVeiculo(String placa, Date data, String motorista, int km, int qtdL
     /**
      * @return the valorCombustivel
      */
-    public double getValorCombustivel() {
+    public float getValorCombustivel() {
         return valorCombustivel;
     }
 
     /**
      * @param valorCombustivel the valorCombustivel to set
      */
-    public void setValorCombustivel(double valorCombustivel) {
+    public void setValorCombustivel(float valorCombustivel) {
         this.valorCombustivel = valorCombustivel;
     }
 
@@ -159,6 +159,14 @@ public GastosVeiculo(String placa, Date data, String motorista, int km, int qtdL
     public void setKmpordia(int kmpordia) {
         this.kmpordia = kmpordia;
     }
+    
+    @Override
+    public String toString() {
+        return "Placa: " + placa + " Data: "+ data + " Motorista: " + motorista + " KM: "
+                + km +" Qtd. de litros : " + qtdLitros + " Valor do combustível: " + valorCombustivel
+                + " Descrição da manutenção: "+descManutencao +" Valor da manutenção"+valorManutencao + " KM percorrido no dia:"+ kmpordia; 
+    }
+    
 
 
 

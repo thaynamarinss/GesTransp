@@ -1,0 +1,3 @@
+ana;distribuidora;1;11;22222;rua tal;ana@gmail.com
+juliano;distribuidora juliano;2;2323;226556;rua eu nao sei;dist@gmail.com
+marcela;marcela party;3;65;22787878;rua new york;marcelas@gmail.com

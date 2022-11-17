@@ -6,19 +6,19 @@ package com.mycompany.gestransp;
 
 /**
  *
- * @author thayn
+ * @author Thayná Marins e Raphael Yoshiki
  */
 import java.util.Date;
 public class ControleMercadoria {
-    private Date data; //data da coleta ou entrega
+    private String data; //data da coleta ou entrega
     private String motorista;
     private String numNota;
     private String cidade;
     private String nomeEmpresa;
-    private Date dataEmissaoNota;
+    private String dataEmissaoNota;
     private String nomeAjudante;
     
-    public ControleMercadoria(Date data, String motorista, String numNota, String cidade, String nomeEmpresa, Date dataEmissaoNota, String nomeAjudante){
+    public ControleMercadoria(String data, String motorista, String numNota, String cidade, String nomeEmpresa, String dataEmissaoNota, String nomeAjudante){
         this.data = data;
         this.motorista = motorista;
         this.numNota = numNota;
@@ -31,14 +31,14 @@ public class ControleMercadoria {
     /**
      * @return the data
      */
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
     /**
      * @param data the data to set
      */
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -101,14 +101,14 @@ public class ControleMercadoria {
     /**
      * @return the dataEmissaoNota
      */
-    public Date getDataEmissaoNota() {
+    public String getDataEmissaoNota() {
         return dataEmissaoNota;
     }
 
     /**
      * @param dataEmissaoNota the dataEmissaoNota to set
      */
-    public void setDataEmissaoNota(Date dataEmissaoNota) {
+    public void setDataEmissaoNota(String dataEmissaoNota) {
         this.dataEmissaoNota = dataEmissaoNota;
     }
 
@@ -124,6 +124,13 @@ public class ControleMercadoria {
      */
     public void setNomeAjudante(String nomeAjudante) {
         this.nomeAjudante = nomeAjudante;
+    }
+    
+     @Override
+    public String toString() {
+        return "Data: " + data + "Motorista: "+ motorista + " Nº da nota: " + numNota + "Cidade: "
+                + cidade +"Nome da empresa: " + nomeEmpresa + "Data da emissão da nota: " + dataEmissaoNota
+                + "Ajudante: "+nomeAjudante; 
     }
     
 }

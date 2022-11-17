@@ -6,7 +6,7 @@ package com.mycompany.gestransp;
 
 /**
  *
- * @author thayn
+ * @author Thayná Marins e Raphael Yoshiki
  */
 public class Clientes {
     private String nomeFantasia;
@@ -124,5 +124,13 @@ public class Clientes {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    @Override
+    public String toString() {
+        return "Nome Fantasia: " + nomeFantasia + " Razão Social: "+ razaoSocial+ " CNPJ: " + cnpj + " Inscrição Estadual: "
+                + inscricaoEstadual + " Telefone: " + tel + " Endereço: " + endereco + " E-mail: "+email; 
+    }
+    
+    
     
 }
